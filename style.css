@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: #fafafa;  /* Light background color */
+    background: #fafafa;
     margin: 0;
     padding: 0;
     color: #333;
@@ -16,7 +16,7 @@ body {
     transform: translate(-50%, -50%);
     font-family: 'Poppins', sans-serif;
     font-size: 15rem;
-    color: rgba(30, 144, 255, 0.1); /* Exotic color: DodgerBlue */
+    color: rgba(30, 144, 255, 0.1);
     z-index: -1;
     animation: float 10s infinite alternate;
 }
@@ -40,7 +40,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Maintain horizontal layout */
 }
 
 .logo-container {
@@ -62,7 +62,7 @@ header {
 }
 
 .brand-name:hover {
-    color: #ffd700; /* Gold color on hover */
+    color: #ffd700;
 }
 
 nav ul {
@@ -124,13 +124,12 @@ nav ul li a:hover {
 }
 
 .icons a:hover {
-    color: #ffd700; /* Gold color on hover */
+    color: #ffd700;
 }
 
 .search-container {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .search-container input {
@@ -386,35 +385,66 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     nav ul {
         flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
     }
 
     nav ul li {
-        margin: 10px 0;
-    }
-
-    .search-container {
-        flex-direction: column;
-    }
-
-    .search-container input,
-    .search-container button {
-        width: 100%;
         margin: 5px 0;
+        width: 100%;
     }
 
-    .products, .category-list {
-        flex-direction: column;
-        align-items: center;
+    nav ul li a {
+        width: 100%;
+        padding: 10px 0;
+        text-align: left;
     }
 
     .auth-buttons {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        width: 100%;
     }
 
     .icons {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .search-container input, .search-container button {
+        width: 100%;
+    }
+
+    .category-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .category-menu ul li {
+        margin: 5px 0;
+    }
+
+    .category-menu ul li a {
+        width: 100%;
+        padding: 10px 0;
+        text-align: left;
+    }
+
+    .products, .category-list {
         flex-direction: column;
         align-items: center;
     }
