@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: #f8f8f8;
+    background: #fafafa;  /* Light background color */
     margin: 0;
     padding: 0;
     color: #333;
@@ -16,7 +16,7 @@ body {
     transform: translate(-50%, -50%);
     font-family: 'Poppins', sans-serif;
     font-size: 15rem;
-    color: rgba(255, 69, 0, 0.1); /* Exotic color: Tomato */
+    color: rgba(30, 144, 255, 0.1); /* Exotic color: DodgerBlue */
     z-index: -1;
     animation: float 10s infinite alternate;
 }
@@ -55,6 +55,13 @@ header {
 .brand-name {
     font-size: 1.5em;
     color: #ff4757;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.brand-name:hover {
+    color: #ffd700; /* Gold color on hover */
 }
 
 nav ul {
@@ -96,6 +103,27 @@ nav ul li a:hover {
 
 .auth-buttons button:hover {
     background: #e8413d;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.icons a i {
+    margin-right: 5px;
+}
+
+.icons a:hover {
+    color: #ffd700; /* Gold color on hover */
 }
 
 .search-container {
@@ -251,6 +279,38 @@ main {
     font-size: 1em;
     margin: 0 0 10px 0;
     color: #ff4757;
+}
+
+.product-details {
+    text-align: left;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.product-details .price {
+    color: #ff4757;
+    font-weight: bold;
+}
+
+.product-details .discount {
+    color: #888;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.product-details .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-details .rating i {
+    color: #ffd700;
+}
+
+.product-details .availability {
+    color: #ff4757;
+    font-weight: bold;
 }
 
 .newsletter-form {
