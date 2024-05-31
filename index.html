@@ -3,70 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS Info Fetcher</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            color: #fff;
-        }
-        .container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        button {
-            background: #fff;
-            color: #333;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background: #f0f0f0;
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 0.8em;
-        }
-    </style>
+    <title>Unvld</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>AWS Info Fetcher</h1>
-        <button onclick="getInfo('lambdas')">Get Info of Lambdas</button>
-        <button onclick="getInfo('s3buckets')">Get Info of S3 Buckets</button>
+        <h1>Unvld</h1>
+        <button onclick="fetchLambdaInfo()">Are you a buyer</button>
+        <button onclick="fetchS3Info()">Are you a designer</button>
         <div>
             <img src="aws_logo.png" alt="AWS Logo" width="200">
         </div>
-        <p>Built with ❤️ using AWS and JavaScript</p>
+        <p>Built with ❤️</p>
+        <p><a href="https://www.instagram.com/unvld.co.in?utm_source=qr&igsh=eGdy-cmVxdWpnc2I4" target="_blank">unvld.co.in</a></p>
+        <div id="content" class="content"></div>
+        <button class="help-button" onclick="openChat()">Need help <span class="chat-icon">💬</span></button>
         <div class="footer">
-            © 2024 AWS Info Fetcher. All rights reserved.
+            © 2024 Unvld. All rights reserved.
         </div>
     </div>
-
-    <script>
-        function getInfo(type) {
-            // JavaScript function to fetch AWS info
-            alert(`Fetching info for ${type}`);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

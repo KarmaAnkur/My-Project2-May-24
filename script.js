@@ -1,5 +1,3 @@
-// script.js
-
 function fetchLambdaInfo() {
     fetch('https://your-api-gateway-url/lambdas')
         .then(response => response.json())
@@ -17,4 +15,8 @@ function fetchS3Info() {
 function displayData(data) {
     const contentDiv = document.getElementById('content');
     contentDiv.innerHTML = JSON.stringify(data, null, 2);
+}
+
+function openChat() {
+    alert("Opening chat support...");
 }
