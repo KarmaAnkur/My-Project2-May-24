@@ -4,25 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AWS Info Fetcher</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #fff;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #f0f0f0;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>AWS Info Fetcher</h1>
-        <div class="tabs">
-            <button onclick="fetchLambdaInfo()">Get Info of Lambdas</button>
-            <button onclick="fetchS3Info()">Get Info of S3 Buckets</button>
+        <button onclick="getInfo('lambdas')">Get Info of Lambdas</button>
+        <button onclick="getInfo('s3buckets')">Get Info of S3 Buckets</button>
+        <div>
+            <img src="aws_logo.png" alt="AWS Logo" width="200">
         </div>
-        <div id="content"></div>
-    </div>
-    <div class="floating-icon">
-        <img src="aws-icon.png" alt="AWS Icon">
-    </div>
-    <footer>
         <p>Built with ❤️ using AWS and JavaScript</p>
-        <p>&copy; 2024 AWS Info Fetcher. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+        <div class="footer">
+            © 2024 AWS Info Fetcher. All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        function getInfo(type) {
+            // JavaScript function to fetch AWS info
+            alert(`Fetching info for ${type}`);
+        }
+    </script>
 </body>
 </html>
