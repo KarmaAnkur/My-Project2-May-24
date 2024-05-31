@@ -1,4 +1,5 @@
 // script.js
+
 function fetchLambdaInfo() {
     fetch('https://your-api-gateway-url/lambdas')
         .then(response => response.json())
