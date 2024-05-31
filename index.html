@@ -3,25 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unvld</title>
+    <title>Unvld - Custom Fashion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Unvld</h1>
-        <button onclick="fetchLambdaInfo()">Are you a buyer</button>
-        <button onclick="fetchS3Info()">Are you a designer</button>
-        <div>
-            <img src="aws_logo.png" alt="AWS Logo" width="200">
+    <header>
+        <div class="logo-container">
+            <img src="unvld-logo.png" alt="Unvld Logo" class="brand-logo">
+            <span class="brand-name">Unvld</span>
         </div>
-        <p>Built with ❤️</p>
-        <p><a href="https://www.instagram.com/unvld.co.in?utm_source=qr&igsh=eGdy-cmVxdWpnc2I4" target="_blank">unvld.co.in</a></p>
-        <div id="content" class="content"></div>
-        <button class="help-button" onclick="openChat()">Need help <span class="chat-icon">💬</span></button>
-        <div class="footer">
-            © 2024 Unvld. All rights reserved.
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Search..">
+            <button type="submit">Search</button>
         </div>
-    </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Unvld</h1>
+                <p>Your one-stop shop for custom fashion.</p>
+                <button onclick="fetchLambdaInfo()">Are you a buyer</button>
+                <button onclick="fetchS3Info()">Are you a designer</button>
+            </div>
+        </section>
+        <section class="products">
+            <!-- Dynamic content will be loaded here -->
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>Built with ❤️</p>
+            <p><a href="https://www.instagram.com/unvld.co.in?utm_source=qr&igshid=eGdy-cmVxdWpnc2I4" target="_blank">unvld.co.in</a></p>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/unvld.co.in?utm_source=qr&igshid=eGdy-cmVxdWpnc2I4" target="_blank">
+                    <img src="instagram-logo.png" alt="Instagram Logo" class="instagram-logo"> @unvld.co.in
+                </a>
+            </div>
+            <div class="bottom-info">
+                <p>UNVLD is a custom fashion brand where we sell t-shirts based on whatever customers want to select and customize the design.</p>
+            </div>
+        </div>
+        <p>© 2024 Unvld. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
