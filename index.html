@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="floating-bg">UNVLD</div>
     <header>
         <div class="logo-container">
             <img src="unvld-logo.png" alt="Unvld Logo" class="brand-logo">
@@ -20,11 +21,22 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <div class="auth-buttons">
+            <button onclick="logIn()">Log In</button>
+            <button onclick="signUp()">Sign Up</button>
+        </div>
         <div class="search-container">
             <input type="text" placeholder="Search..">
             <button type="submit">Search</button>
         </div>
     </header>
+    <div class="category-menu">
+        <ul>
+            <li><a href="#">Men's Fashion</a></li>
+            <li><a href="#">Women's Fashion</a></li>
+            <li><a href="#">Kids Fashion</a></li>
+        </ul>
+    </div>
     <main>
         <section class="hero">
             <div class="hero-content">
@@ -34,8 +46,19 @@
                 <button onclick="fetchS3Info()">Are you a designer</button>
             </div>
         </section>
-        <section class="products">
-            <!-- Dynamic content will be loaded here -->
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="products" id="products">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </section>
+        <section class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest updates and offers.</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </div>
         </section>
     </main>
     <footer>

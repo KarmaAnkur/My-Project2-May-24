@@ -17,7 +17,7 @@ function loadProducts() {
         // Add more products here
     ];
 
-    const productContainer = document.querySelector('.products');
+    const productContainer = document.querySelector('#products');
     products.forEach(product => {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
@@ -51,4 +51,12 @@ function displayData(data) {
 
 function openChat() {
     alert("Opening chat support...");
+}
+
+function logIn() {
+    alert("Log In functionality coming soon!");
+}
+
+function signUp() {
+    alert("Sign Up functionality coming soon!");
 }
