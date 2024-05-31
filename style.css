@@ -40,6 +40,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    flex-wrap: wrap;
 }
 
 .logo-container {
@@ -129,6 +130,7 @@ nav ul li a:hover {
 .search-container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .search-container input {
@@ -405,5 +407,27 @@ footer p {
     .products, .category-list {
         flex-direction: column;
         align-items: center;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
     }
 }
